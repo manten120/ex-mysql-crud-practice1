@@ -1,0 +1,27 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+  text-decoration: none;
+}
+
+.error {
+  color: red;
+}
+
+tr {
+  width: 80%;
+  line-height: 30px;
+  font-size: 18px;
+}
+
+.index_th {
+  width: 30%;
+}
+
+.index_table {
+  margin-bottom: 30px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <a href="/">お品書きに戻る</a>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <h2><a href="/addmenu">新規登録</a></h2>
+    <table>
+    <% for(let i in menus){ %> 
+      <tr>
+        <% let menu = menus[i] %>
+        <th><a href="/edit?id=<%=menu.id %>">編集</a></th>
+        <td><%= menu.name %></td>
+        <td><%= menu.price %>円(税込)</td>
+        <td><%= menu.info %></td>
+      </tr>
+      <% } %>
+    </table>
+  </body>
+</html>

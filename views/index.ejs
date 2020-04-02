@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <table class="index_table">
+      <% for(let i in menus){ %> 
+      <tr>
+        <% let menu = menus[i] %>
+        <th class="index_th"><a href="/detail?id=<%=menu.id %>"><%= menu.name %></a></th>
+        <td><%= menu.price %> 円 (税込)</td>
+        <td id="info"><%= menu.info %></td>
+      </tr>
+      <% } %>
+    </table>
+    <form method="post" action="/">
+      <input type="password" name="password" placeholder="パスワード">
+      <input type="submit" value="管理メニューへ">
+    </form>
+  </body>
+</html>

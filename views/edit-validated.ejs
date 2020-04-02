@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <form method='post' action="/delete">
+      <input type="hidden" name="id" value="<%= menu.id%>">
+      <input type="submit" value="削除">
+    </form>
+    <h1><%= title %></h1>
+    <p><%- validationMessage %></p>
+    <form method="post" action="/edit">
+      <input type="hidden" name="id" value="<%= menu.id%>">
+      <table>
+        <tr>
+          <th>料理名</th>
+          <td><input type="text" name="name" value="<%= form.name%>"></td>
+          <td></td>
+        </tr>
+        <tr>
+          <th>値段</th>
+        <td><input type="text" name="price" value="<%= form.price%>"></td>
+        <td>円(税込み)</td>
+      </tr>
+      <tr>
+        <th>その他(在庫状況など)</th>
+        <td><input type="text" name="info" value="<%= form.info%>"></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th></th>
+        <td></td>
+        <td><input type="submit" value="更新"></td>
+      </tr>
+    </table>
+    </form>
+  </body>
+</html>
