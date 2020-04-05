@@ -11,7 +11,7 @@
       <tr>
         <% let menu = menus[i] %>
         <th class="index_th"><a href="/detail?id=<%=menu.id %>"><%= menu.name %></a></th>
-        <td><%= menu.price %> 円 (税込)</td>
+        <td><%= menu.price %> 円 <span class="tax">(税込)</span></td>
         <td id="info"><%= menu.info %></td>
       </tr>
       <% } %>
