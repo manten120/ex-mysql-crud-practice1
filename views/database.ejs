@@ -10,12 +10,12 @@
     <h2><a href="/addmenu">新規登録</a></h2>
     <table>
     <% for(let i in menus){ %> 
-      <tr>
+      <tr class="db_tr">
         <% let menu = menus[i] %>
-        <th><a href="/edit?id=<%=menu.id %>">編集</a></th>
-        <td><%= menu.name %></td>
-        <td><%= menu.price %>円(税込)</td>
-        <td><%= menu.info %></td>
+        <th class="db_th"><a href="/edit?id=<%=menu.id %>">編集</a></th>
+        <td class="db_td"><%= menu.name %></td>
+        <td class="db_td"><%= menu.price %>円(税込)</td>
+        <td class="db_td"><%= menu.info %></td>
       </tr>
       <% } %>
     </table>
